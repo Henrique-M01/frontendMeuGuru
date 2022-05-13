@@ -20,16 +20,22 @@ export default function CreateOrUpdateUser() {
     }
   }
 
-  async function updateUser(name: string, email: string, password: string, equalPassword: string, id: string) {
-    if (password === equalPassword && name && email && id) {
-      await axios.put(`http://localhost:3010/users/${id}`, { name, email, password } )
-      
-      navigate('/')
-    }
+  async function updateUser(
+    name: string,
+    email: string,
+    password: string,
+    equalPassword: string, 
+    id: string,
+    ) {
+      if (password === equalPassword && name && email && id) {
+        await axios.put(`http://localhost:3010/users/${id}`, { name, email, password } )
+        
+        navigate('/')
+      }
   }
 
   return (
-    <div>
+    <div className="bg-gray-600">
       <form>
       <label htmlFor="input-name">
         <input
@@ -66,6 +72,7 @@ export default function CreateOrUpdateUser() {
       { TYPE === 'create' 
       ? 
         <button
+          className="bg-gray-700 text-2xl"
           onClick={(event) => {
             event.preventDefault();
             createUser(name, email, password, equalPassword)
