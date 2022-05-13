@@ -1,0 +1,23 @@
+input {
+  width: 150px;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 200;
+  border-radius: 8px;
+}
+
+button {
+  text-align: center;
+  color: #6C7B8B;
+  width: 150px;
+  padding: 5px 18px;
+  font-size: 12px;
+  font-weight: 200;
+  border-radius: 8px;
+  background-color: gray;
+}
+
+button:hover {
+  background: #9FB6CD;
+  transition: 100ms;
+}

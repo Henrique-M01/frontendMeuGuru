@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import IUser from '../interface/IUser';
+import '../styles/ButtonsAndInput.css';
 
 export default function Table() {
   const [users, setUsers] = useState([]);
@@ -34,7 +35,7 @@ export default function Table() {
   }
 
   return (
-    <div className='bg-gray-500'>
+    <div>
       <input
         type="text"
         placeholder="Filtrar por nome"
