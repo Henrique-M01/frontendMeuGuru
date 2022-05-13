@@ -72,7 +72,6 @@ export default function CreateOrUpdateUser() {
       { TYPE === 'create' 
       ? 
         <button
-          className="bg-gray-700 text-2xl"
           onClick={(event) => {
             event.preventDefault();
             createUser(name, email, password, equalPassword)
