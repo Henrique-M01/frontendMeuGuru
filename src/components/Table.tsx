@@ -36,26 +36,28 @@ export default function Table() {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Filtrar por nome"
-        onChange={(event) => setName(event.target.value) }
-      />
-      <button
-        onClick={ () => filterByName(name)}
-      >
-        Filtrar por nome
-      </button>
-      <input
-        type="text"
-        placeholder="Filtrar por email"
-        onChange={(event) => setEmail(event.target.value) }
-      />
-      <button
-        onClick={ () => filterByEmail(email)}
-      >
-        Filtrar por email
-      </button>
+      <div className="container-inputs-filter">
+        <input
+          type="text"
+          placeholder="Filtrar por nome"
+          onChange={(event) => setName(event.target.value) }
+        />
+        <button
+          onClick={ () => filterByName(name)}
+        >
+          Filtrar por nome
+        </button>
+        <input
+          type="text"
+          placeholder="Filtrar por email"
+          onChange={(event) => setEmail(event.target.value) }
+        />
+        <button
+          onClick={ () => filterByEmail(email)}
+        >
+          Filtrar por email
+        </button>
+      </div>
       <table>
         <thead>
           <tr>
@@ -86,7 +88,12 @@ export default function Table() {
           ))}
         </tbody>
       </table>
-      <button onClick={() => navigate('/users/create')}>Criar usuario</button>
+      <button
+        onClick={() => navigate('/users/create')}
+        className="create-user"
+      >
+        Criar usuario
+      </button>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import '../styles/CreateOrUpdate.css';
 
 export default function CreateOrUpdateUser() {
   const [name, setName] = useState('');
@@ -35,9 +36,10 @@ export default function CreateOrUpdateUser() {
   }
 
   return (
-    <div className="bg-gray-600">
+    <div>
       <form>
       <label htmlFor="input-name">
+        Nome
         <input
           id="input-name"
           type="text"
@@ -46,6 +48,7 @@ export default function CreateOrUpdateUser() {
         />
       </label>
       <label htmlFor="input-email">
+        Email
         <input
           id="input-email"
           type="text"
@@ -54,6 +57,7 @@ export default function CreateOrUpdateUser() {
         />
       </label>
       <label htmlFor="input-password">
+        Senha
         <input
           id="input-password"
           type="password"
@@ -62,6 +66,7 @@ export default function CreateOrUpdateUser() {
         />
       </label>
       <label htmlFor="input-confirm-password">
+        Confirme a senha
         <input
           id="input-confirm-password"
           type="password"
