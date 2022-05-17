@@ -13,7 +13,7 @@ No README.md do repositorio, voce encontrara mais informcaoes de como prosseguir
 
 ## Técnologias usadas
 
-Back-end:
+Front-end:
 > Desenvolvido usando: ES6, Typescript, React, React-Router, Context API, Hooks
 
 
